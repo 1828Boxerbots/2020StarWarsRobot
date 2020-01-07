@@ -7,6 +7,9 @@
 
 #pragma once
 
+//int constexpr PWM_MOTOR_LEFT = 1;
+//int constexpr PWM_MOTOR_RIGHT = 2;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
