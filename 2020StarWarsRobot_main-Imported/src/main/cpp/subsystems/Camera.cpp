@@ -12,18 +12,23 @@ Camera::Camera() : Subsystem("ExampleSubsystem") {}
 void Camera::InitDefaultCommand() {
   // Set the default command for a subsystem here.
   // SetDefaultCommand(new MySpecialCommand());
-   m_camera.open(0);
+  
 
+}
+
+void Camera::startCamera()
+{
+   m_camera.open(0);
 }
 
 
 
 void Camera::TakeFrame()
 {
-  
-  m_camera>>m_frame;
-
-  source.PutFrame(m_frame);
+  m_frame = m_camera.grab();
+  sink.GrabFrame(m_frame);
+  //cv::imshow("test",m_frame);
+  source.PutFrame(m_frame);  
   
 }
 

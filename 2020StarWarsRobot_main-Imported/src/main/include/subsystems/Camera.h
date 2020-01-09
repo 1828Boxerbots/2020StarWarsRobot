@@ -22,11 +22,14 @@ class Camera : public frc::Subsystem {
   // for methods that implement subsystem capabilities
   cv::Mat m_frame; 
   VideoCapture m_camera;
-  cs::CvSource source = CameraServer::GetInstance()->PutVideo("test",640,480);
   
+  cs::CvSource source = CameraServer::GetInstance()->PutVideo("test",640,480);
+  cs::CvSink sink = CameraServer::GetInstance()->GetVideo();
+  //cs::UsbCamera m_cam = CameraServer::GetInstance()->StartAutomaticCapture();
  public:
   Camera();
   void InitDefaultCommand() override;
+  void startCamera();
   void TakeFrame();
 
   

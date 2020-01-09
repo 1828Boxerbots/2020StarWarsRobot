@@ -14,9 +14,11 @@
 OI Robot::m_oi;
 std::shared_ptr <Camera>  Robot::m_videocapture = std::make_shared<Camera>();
 
-void Robot::RobotInit() {
-    m_CMDCamera.Start();     
-    
+void Robot::RobotInit()
+ {
+        
+     m_CMDCamera.Start(); 
+
 }
 
 /**
@@ -56,7 +58,6 @@ void Robot::AutonomousInit() {
 void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
 void Robot::TeleopInit() {
- 
 }
 
 void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }

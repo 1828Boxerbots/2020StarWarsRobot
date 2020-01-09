@@ -18,7 +18,7 @@ CMDCamera::CMDCamera() {
 // Called just before this Command runs the first time
 void CMDCamera::Initialize() 
 {
-  Robot::m_videocapture->InitDefaultCommand();
+  Robot::m_videocapture->startCamera();
 }
 
 // Called repeatedly when this Command is scheduled to run
