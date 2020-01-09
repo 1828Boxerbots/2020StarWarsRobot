@@ -11,15 +11,19 @@
 CMDCamera::CMDCamera() {
   // Use Requires() here to declare subsystem dependencies
   // eg. Requires(Robot::chassis.get());
+ Requires(Robot::m_videocapture.get());
   
 }
 
 // Called just before this Command runs the first time
-void CMDCamera::Initialize() {}
+void CMDCamera::Initialize() 
+{
+  Robot::m_videocapture->InitDefaultCommand();
+}
 
 // Called repeatedly when this Command is scheduled to run
 void CMDCamera::Execute() {
-
+  Robot::m_videocapture->TakeFrame();
 }
 
 // Make this return true when this Command no longer needs to run execute()

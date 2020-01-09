@@ -12,9 +12,11 @@
 
 
 OI Robot::m_oi;
+std::shared_ptr <Camera>  Robot::m_videocapture = std::make_shared<Camera>();
 
 void Robot::RobotInit() {
-
+    m_CMDCamera.Start();     
+    
 }
 
 /**
