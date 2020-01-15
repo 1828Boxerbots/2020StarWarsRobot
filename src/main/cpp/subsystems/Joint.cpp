@@ -5,7 +5,9 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "commands/ExampleCommand.h"
+#include "subsystems/Joint.h"
 
-ExampleCommand::ExampleCommand(ExampleSubsystem* subsystem)
-    : m_subsystem{subsystem} {}
+Joint::Joint() {}
+
+// This method will be called once per scheduler run
+void Joint::Periodic() {}

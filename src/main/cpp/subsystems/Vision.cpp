@@ -5,7 +5,9 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "commands/ExampleCommand.h"
+#include "subsystems/Vision.h"
 
-ExampleCommand::ExampleCommand(ExampleSubsystem* subsystem)
-    : m_subsystem{subsystem} {}
+Vision::Vision() {}
+
+// This method will be called once per scheduler run
+void Vision::Periodic() {}

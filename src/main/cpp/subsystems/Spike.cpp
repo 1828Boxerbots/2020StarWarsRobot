@@ -5,7 +5,9 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "commands/ExampleCommand.h"
+#include "subsystems/Spike.h"
 
-ExampleCommand::ExampleCommand(ExampleSubsystem* subsystem)
-    : m_subsystem{subsystem} {}
+Spike::Spike() {}
+
+// This method will be called once per scheduler run
+void Spike::Periodic() {}

@@ -5,7 +5,20 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "commands/ExampleCommand.h"
+#pragma once
 
-ExampleCommand::ExampleCommand(ExampleSubsystem* subsystem)
-    : m_subsystem{subsystem} {}
+#include <frc2/command/SubsystemBase.h>
+
+class DistanceFinder : public frc2::SubsystemBase {
+ public:
+  DistanceFinder();
+
+  /**
+   * Will be called periodically whenever the CommandScheduler runs.
+   */
+  void Periodic();
+
+ private:
+  // Components (e.g. motor controllers and sensors) should generally be
+  // declared private and exposed only through public methods.
+};

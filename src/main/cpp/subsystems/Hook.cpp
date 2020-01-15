@@ -5,7 +5,9 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "commands/ExampleCommand.h"
+#include "subsystems/Hook.h"
 
-ExampleCommand::ExampleCommand(ExampleSubsystem* subsystem)
-    : m_subsystem{subsystem} {}
+Hook::Hook() {}
+
+// This method will be called once per scheduler run
+void Hook::Periodic() {}

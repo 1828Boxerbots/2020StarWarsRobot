@@ -5,7 +5,9 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "commands/ExampleCommand.h"
+#include "subsystems/DistanceFinder.h"
 
-ExampleCommand::ExampleCommand(ExampleSubsystem* subsystem)
-    : m_subsystem{subsystem} {}
+DistanceFinder::DistanceFinder() {}
+
+// This method will be called once per scheduler run
+void DistanceFinder::Periodic() {}
