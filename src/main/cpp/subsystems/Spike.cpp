@@ -11,3 +11,14 @@ Spike::Spike() {}
 
 // This method will be called once per scheduler run
 void Spike::Periodic() {}
+
+
+void Spike::TurnLightsOn() 
+{
+    m_spike.Set(Relay::kForward);
+}
+
+void Spike::TurnLightsOff() 
+{
+    m_spike.Set(Relay::kOff);
+}

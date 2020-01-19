@@ -8,9 +8,24 @@
 #pragma once
 
 #include <frc2/command/Command.h>
+#include <frc2/command/RunCommand.h>
+
+#include <frc/XboxController.h>
 
 #include "commands/ExampleCommand.h"
+
+#include "subsystems/ColorDetection.h"
+#include "subsystems/DistanceFinder.h"
+#include "subsystems/DriveTrain.h"
 #include "subsystems/ExampleSubsystem.h"
+#include "subsystems/Hook.h"
+#include "subsystems/Joint.h"
+#include "subsystems/PickUp.h"
+#include "subsystems/Shooter.h"
+#include "subsystems/Spike.h"
+#include "subsystems/Spinner.h"
+#include "subsystems/Vision.h"
+
 
 /**
  * This class is where the bulk of the robot should be declared.  Since
@@ -29,6 +44,22 @@ class RobotContainer {
   // The robot's subsystems and commands are defined here...
   ExampleSubsystem m_subsystem;
   ExampleCommand m_autonomousCommand;
+
+  frc::XboxController m_xboxController{CONTROLLER};
+
+  ColorDetection m_colorDetection;
+  DistanceFinder m_distanceFinder;
+  DriveTrain m_driveTrain;
+  Hook m_hook;
+  Joint m_joint;
+  PickUp m_pickUp;
+  Shooter m_shooter;
+  Spike m_spike;
+  Spinner m_spinner;
+  Vision m_vision;
+
+  frc2::RunCommand m_turnLightsOn {[this] {m_spike.TurnLightsOn() ;}, {&m_spike}};
+  frc2::RunCommand m_turnLightsOff{[this] {m_spike.TurnLightsOff();}, {&m_spike}};
 
   void ConfigureButtonBindings();
 };

@@ -16,3 +16,49 @@
  * command-specific namespaces within this header, which can then be used where
  * they are needed.
  */
+
+// PWM
+
+//Drive Motors are Y-Split
+constexpr int LEFT_DRIVE = 0;
+constexpr int RIGHT_DRIVE = 0;
+constexpr int PICKUP_BOTTOM = 0;
+constexpr int PICKUP_MIDDLE = 0;
+constexpr int PICKUP_TOP = 0;
+constexpr int SHOOTER_ONE = 0;
+constexpr int SHOOTER_TWO = 0;
+constexpr int JOINT = 0;
+constexpr int SPINNER = 0;
+constexpr int HOOK = 0;
+
+// RELAY
+constexpr int SPIKE = 0;
+
+//USB
+constexpr int CONTROLLER = 0;
+
+// Color Ranging Constants
+constexpr int RED_HIGH_R = 0;
+constexpr int RED_HIGH_G = 0;
+constexpr int RED_HIGH_B = 0;
+constexpr int RED_LOW_R = 0;
+constexpr int RED_LOW_G = 0;
+constexpr int RED_LOW_B = 0;
+constexpr int BLUE_HIGH_R = 0;
+constexpr int BLUE_HIGH_G = 0;
+constexpr int BLUE_HIGH_B = 0;
+constexpr int BLUE_LOW_R = 0;
+constexpr int BLUE_LOW_G = 0;
+constexpr int BLUE_LOW_B = 0;
+constexpr int GREEN_HIGH_R = 0;
+constexpr int GREEN_HIGH_G = 0;
+constexpr int GREEN_HIGH_B = 0;
+constexpr int GREEN_LOW_R = 0;
+constexpr int GREEN_LOW_G = 0;
+constexpr int GREEN_LOW_B = 0;
+constexpr int YELLOW_HIGH_R = 0;
+constexpr int YELLOW_HIGH_G = 0;
+constexpr int YELLOW_HIGH_B = 0;
+constexpr int YELLOW_LOW_R = 0;
+constexpr int YELLOW_LOW_G = 0;
+constexpr int YELLOW_LOW_B = 0;

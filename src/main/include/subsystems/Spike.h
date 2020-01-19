@@ -8,11 +8,17 @@
 #pragma once
 
 #include <frc2/command/SubsystemBase.h>
+#include <frc/Relay.h>
+#include <Constants.h>
+
+using namespace frc;
 
 class Spike : public frc2::SubsystemBase {
  public:
   Spike();
 
+  void TurnLightsOn();
+  void TurnLightsOff();
   /**
    * Will be called periodically whenever the CommandScheduler runs.
    */
@@ -21,4 +27,5 @@ class Spike : public frc2::SubsystemBase {
  private:
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
+  Relay m_spike{SPIKE};
 };
