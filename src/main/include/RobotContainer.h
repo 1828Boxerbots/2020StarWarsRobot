@@ -13,10 +13,12 @@
 #include <frc/XboxController.h>
 
 #include "commands/ExampleCommand.h"
-
+#include "commands/CameraCMD.h"
+#include "commands/DriveCMD.h"
+#include "subsystems/CameraSubsystem.h"
 #include "subsystems/ColorDetection.h"
 #include "subsystems/DistanceFinder.h"
-#include "subsystems/DriveTrain.h"
+#include "subsystems/DriveTrainSubsystemBase.h"
 #include "subsystems/ExampleSubsystem.h"
 #include "subsystems/Hook.h"
 #include "subsystems/Joint.h"
@@ -41,6 +43,7 @@ class RobotContainer {
   frc2::Command* GetAutonomousCommand();
 
  private:
+  frc::XboxController m_controller{0};
   // The robot's subsystems and commands are defined here...
   ExampleSubsystem m_subsystem;
   ExampleCommand m_autonomousCommand;
@@ -49,7 +52,8 @@ class RobotContainer {
 
   ColorDetection m_colorDetection;
   DistanceFinder m_distanceFinder;
-  DriveTrain m_driveTrain;
+  
+  DriveTrainSubsystemBase m_drivetrain;
   Hook m_hook;
   Joint m_joint;
   PickUp m_pickUp;
@@ -57,7 +61,10 @@ class RobotContainer {
   Spike m_spike;
   Spinner m_spinner;
   Vision m_vision;
-
+  CameraSubsystem m_camera;
+  
+  CameraCMD m_cameraCMD{&m_camera};
+  DriveCMD m_driveCMD{&m_drivetrain, m_controller.GetX(GenericHID::kLeftHand), m_controller.GetY(GenericHID::kLeftHand)};
   frc2::RunCommand m_turnLightsOn {[this] {m_spike.TurnLightsOn() ;}, {&m_spike}};
   frc2::RunCommand m_turnLightsOff{[this] {m_spike.TurnLightsOff();}, {&m_spike}};
 

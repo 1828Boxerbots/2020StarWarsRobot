@@ -1,0 +1,8 @@
+See file:///C:/Users/FIRSTMentor/Documents/GitHub/2020StarWarsRobot/2020StarWarsRobot_main-Imported/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling Camera.cpp successful.
+
+compiling CMDCamera.cpp successful.
+
+compiling Robot.cpp successful.
+
+Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/FIRSTMentor/Documents/GitHub/2020StarWarsRobot/2020StarWarsRobot_main-Imported/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.

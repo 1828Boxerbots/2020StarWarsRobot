@@ -1,13 +1,22 @@
 /*----------------------------------------------------------------------------*/
-/* Copyright (c) 2019 FIRST. All Rights Reserved.                             */
+/* Copyright (c) 2018 FIRST. All Rights Reserved.                             */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
 /* must be accompanied by the FIRST BSD license file in the root directory of */
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "subsystems/DriveTrain.h"
+#pragma once
+#include <frc/Timer.h>
 
-DriveTrain::DriveTrain() {}
+namespace Util
+{
+ double Limit(double value, double lowerLimit = -1.0, double higherLimit = 1.0);
 
-// This method will be called once per scheduler run
-void DriveTrain::Periodic() {}
+ void DelayInSeconds(double seconds);
+ void TimeInSeconds(double time);
+
+ //Other Constants 
+ constexpr double PI = 3.141592653589793238462643383279502884197169399375105820974944;
+}
+
+
